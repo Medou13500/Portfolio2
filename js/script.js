@@ -58,4 +58,22 @@ document.addEventListener("DOMContentLoaded", function() {
       updateCircle(js, pourcenJs, 40, CompteurJs);
     }, 30);
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    const presentation = `Je m'appelle BOUZID Mehdy, J'ai 22 ans\nje suis actuellement en formation de développeur web\n web mobile pour
+    monter en compétence par la suite trouver un emploi ou 
+    une alternance`;
+  
+    const texte=document.getElementById('text');
+    let char = 0;
+  
+    function auto() {
+      if (char < presentation.length) {
+        texte.innerHTML += presentation.charAt(char);
+        char++;
+        requestAnimationFrame(auto);
+      }
+    }
+    auto();
+  });
+  
   
